@@ -39,6 +39,7 @@ main {
 
 .side-profile {
   max-width: 350px;
+  height: 490px;
   text-align: center;
   border: 10px double black;
   border-radius: 5px;
