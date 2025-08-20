@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(#c6c4c3, #9a9593);
+  min-height: 100vh;
+}
+
+header {
+  background-color: #9a9593;
+}
+
+#page-title {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-style: normal;
+  font-size: 2.5em;
+  font-weight: 500;
+  width: max-content;
+  margin: 0 auto;
+  padding: 15px;
+  transition: 0.3s ease;
+}
+
+#page-title:hover {
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+main {
+  display: flex;
+  margin: 80px auto;
+  width: 60%;
+  gap: 75px;
+  font-family: "Libertinus Sans", sans-serif;
+}
+
+.side-profile {
+  max-width: 350px;
+  text-align: center;
+  border: 10px double black;
+  border-radius: 5px;
+}
+
+.side-profile h2,
+.side-profile p {
+  padding: 15px 0;
+}
+
+#person-img {
+  object-fit: cover;
+  width: 300px;
+  height: 350px;
+}
+
+.entire-profile {
+  font-size: 1.3em;
+}
+
+#person-name {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+#person-summary {
+  text-align: justify;
+  line-height: 35px;
+}
+
+.btn-container {
+  text-align: center;
+  margin: 100px 0 50px;
+}
+
+#go-home-btn {
+  font-size: 1.1em;
+  padding: 5px 50px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+#go-home-btn:hover {
+  background-color: #837e7c;
+  cursor: pointer;
+  transition: 0.3s ease;
+}

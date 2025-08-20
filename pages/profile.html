@@ -5,11 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AFamousOne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/profile.css">
 </head>
 
 <body>
-
-    <script src="../scripts/main.js"></script>
+    <header>
+        <h1 id="page-title">A Famous One</h1>
+    </header>
+    <main>
+        <div class="side-profile">
+            <img src="https://pyxis.nymag.com/v1/imgs/843/519/c94987157876623c19cfbc55c9443cf581-john-wick.1x.rsquare.w1400.jpg"
+                alt="John Wick" id="person-img">
+            <h2><em id="person-catch-phrase">Baba Yaga</em></h2>
+            <p>Born in <span id="person-birthdate">1978</span></p>
+        </div>
+        <div class="entire-profile">
+            <h2 id="person-name">John Wick</h2>
+            <p id="person-summary">
+                John Wick, born Jardani Jovonovich, is a former assassin trained by the Ruska Roma who became infamous
+                as the feared “Baba Yaga” for his unmatched skill and ruthlessness. After years of killing, he left the
+                underworld by completing an impossible task, retiring to live peacefully with his wife Helen. Following
+                her death, and the killing of the puppy she left him as a final gift, John was drawn back into the
+                violent world he had abandoned. His quest for vengeance set off a chain of events that made him an enemy
+                of the global criminal order known as the High Table, cementing his legacy as both a legend and a hunted
+                man.
+            </p>
+        </div>
+    </main>
+    <div class="btn-container">
+        <button id="go-home-btn">Go Home</button>
+    </div>
+    <script src="../scripts/profile.js"></script>
 </body>
 
 </html>
