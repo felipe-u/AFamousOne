@@ -1,37 +1,27 @@
-const searchBtn = document.getElementById("search-icon");
-const searchInput = document.getElementById("search-input");
+const title = document.getElementById("page-title");
+const goHomeBtn = document.getElementById("go-home-btn");
+const personImg = document.getElementById("person-img");
+const personCatchPhrase = document.getElementById("person-catch-phrase");
+const personBirthDate = document.getElementById("person-birthdate");
+const personName = document.getElementById("person-name");
+const personSummary = document.getElementById("person-summary");
 
-const search = () => {
-  const searchInputValue = searchInput.value;
-  if (searchInputValue === "") {
-    alert("Please enter a value");
-    return;
-  }
+window.addEventListener("load", () => {
+  const personNametoLoad = window.location.search.slice(8).replace("+", " ");
+  const person = people.filter((p) => p.name === personNametoLoad)[0];
+  personImg.src = person.photo;
+  personCatchPhrase.textContent = `"${person.catchPhrase}"`;
+  personBirthDate.textContent = person.birthDate;
+  personName.textContent = person.name;
+  personSummary.textContent = person.summary;
+});
 
-  const personFound = people
-    .map((person) => person.name)
-    .filter((name) => name === searchInputValue);
-
-  const personFoundURLPart = searchInputValue.replace(/ /g, "+");
-  if (personFound.length > 0) {
-    alert(`profile.html?${personFoundURLPart}`);
-    window.location.href = `profile.html?person=${personFoundURLPart}`;
-  } else {
-    alert("Sorry, this person is not registered in our database.");
-    window.open(
-      `https://www.google.com/search?q=${personFoundURLPart}`,
-      "_blank"
-    );
-  }
-  searchInput.value = "";
+goHome = () => {
+  window.location.href = "index.html";
 };
 
-searchBtn.addEventListener("click", search);
-searchInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    search();
-  }
-});
+title.addEventListener("click", goHome);
+goHomeBtn.addEventListener("click", goHome);
 
 class Person {
   constructor(name, catchPhrase, birthDate, photo, summary) {
