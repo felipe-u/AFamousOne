@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
   const person = people.filter((p) => p.name === personNametoLoad)[0];
   personImg.src = person.photo;
   personCatchPhrase.textContent = `"${person.catchPhrase}"`;
-  personBirthDate.textContent = person.birthDate;
+  personBirthDate.textContent = person.birthDate.getFullYear();
   personName.textContent = person.name;
   personSummary.textContent = person.summary;
 });
