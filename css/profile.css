@@ -90,3 +90,17 @@ main {
   cursor: pointer;
   transition: 0.3s ease;
 }
+
+@media (max-width: 1200px) {
+  main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
